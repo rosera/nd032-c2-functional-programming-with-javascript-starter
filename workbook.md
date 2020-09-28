@@ -1,4 +1,10 @@
-# [Task 1 - Initialise the environment](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/task-one.md)
+# Workbook
+
+- [x] Fork the original [Mars Dashboard Repo](https://github.com/udacity/nd032-c2-functional-programming-with-javascript-starter.git)
+- [x] Ensure `yarn` is available on the development machine
+- [ ] Get a [NASA developer API key](https://api.nasa.gov/)
+
+# Task 1 - [Initialise the environment](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/task-one.md)
 
 - [x] Download the code
 - [x] Switch to the branch `project`
@@ -8,10 +14,17 @@
 - [x] Initialise yarn
 - [x] Test the application
 
-# Task 2 - TBC 
+# Task 2 - [Set up Rover Calls](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/task-one.md)
 
-# Task 3 - TBC
+- [ ] Add a new route to `index.js` for Rover API call
+- [ ] Setup new html for page
+- [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
+- [ ] Add an Alert for each Mars Rover to indicate it has been selected
+- [ ] Retrieve information using fetch API
+- [ ] Display information from the fetch API
 
-# Task 4 - TBC
+# Task 3 - [TBC]()
 
-# Task 5 - TBC
+# Task 4 - [TBC]()
+
+# Task 5 - [TBC]()
