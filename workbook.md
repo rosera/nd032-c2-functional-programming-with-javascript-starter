@@ -56,6 +56,7 @@
 
 #### public/client.js
 
+- [x] Change the port from `3000` to `8080`
 - [ ] Object: store
 - [ ] root element
 - [ ] function: updateStore -> render()
