@@ -23,13 +23,24 @@
 
 # Task 3 - [TBC]()
 
-- [ ] Setup new html for page
+- [ ] Add a route for the Rover API
+- [ ] Update the diagram for the new architecture
+- [ ] Mirror the original hierarchy
+- [ ] Test the fetch - show information/parse information
+
+# Task 4 - [TBC]()
+
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
 - [ ] Retrieve information using fetch API
 - [ ] Display information from the fetch API
 
 
-# Task 4 - [TBC]()
-
 # Task 5 - [TBC]()
+
+- [ ] Test
+
+# Task 6 - [TBC]()
+
+- [ ] Setup new html for page
+- [ ] Add fancy html
