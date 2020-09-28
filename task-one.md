@@ -16,7 +16,7 @@ cd nd032-c2-functional-programming-with-javascript-starter/project
 ```
 
 ## Task 1.4 Amend the API Key
-__NOTE:__ Change to valid NASA key or API_DEMO
+__NOTE:__ Change to valid NASA key or DEMO_KEY
 ```
 vi .env-sample
 ```
@@ -36,3 +36,5 @@ yarn
 ```
 yarn start
 ```
+
+## Task 1.8 View the application in the Browser on port:3000
