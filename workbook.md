@@ -23,9 +23,12 @@
 
 # Task 3 - [Add a new Express Route]()
 
-- [ ] Update the diagram for the new architecture
-- [ ] Add a route for the Rover API
-- [ ] Test the new route
+- [x] Update the diagram for the new architecture
+- [x] Add a route for the Rover API
+- [x] Test the new route
+
+![Index.js Overview](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_3_route_arch.png "Route Architecture")
+
 
 # Task 4 - [Add Rover functionality]()
 
