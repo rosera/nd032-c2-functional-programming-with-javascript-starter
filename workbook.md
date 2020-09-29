@@ -32,12 +32,13 @@
 
 # Task 4 - [Add Rover functionality]()
 
-- [ ] Mirror the original hierarchy
+- [ ] Mirror the original apod route code
 - [ ] Add console.log/onscreen info to show Rover fetch
 - [ ] Test the fetch - show information/parse information
 
-# Task 5- [TBC]()
+# Task 5- [Update Client.js - Onscreen display and fetch]()
 
+- [ ] Reuse the existing code hierarchy of client.js
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
 - [ ] Retrieve information using fetch API
