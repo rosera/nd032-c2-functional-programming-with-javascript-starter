@@ -21,14 +21,19 @@
 - [x] Change application port
 - [x] Set up button onscreen
 
-# Task 3 - [TBC]()
+# Task 3 - [Add a new Express Route]()
 
-- [ ] Add a route for the Rover API
 - [ ] Update the diagram for the new architecture
+- [ ] Add a route for the Rover API
+- [ ] Test the new route
+
+# Task 4 - [Add Rover functionality]()
+
 - [ ] Mirror the original hierarchy
+- [ ] Add console.log/onscreen info to show Rover fetch
 - [ ] Test the fetch - show information/parse information
 
-# Task 4 - [TBC]()
+# Task 5- [TBC]()
 
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
@@ -36,11 +41,11 @@
 - [ ] Display information from the fetch API
 
 
-# Task 5 - [TBC]()
+# Task 6- [TBC]()
 
 - [ ] Test
 
-# Task 6 - [TBC]()
+# Task 7- [TBC]()
 
 - [ ] Setup new html for page
 - [ ] Add fancy html
