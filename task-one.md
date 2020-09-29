@@ -24,7 +24,19 @@ git checkout project
 cd project
 ```
 
-## Task 1.5 Change the `src/public/client.js` file to use port:8080
+## Task 1.5 Initialise yarn for the local directory
+
+```
+yarn
+```
+
+## Task 1.6 Run the application code
+```
+yarn start
+```
+![Initial Project view](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_1_yarn_install.png "Initial Yarn installation")
+
+## Task 1.7 Change the `src/public/client.js` file to use port:8080
 
 ```
 const getImageOfTheDay(){
@@ -33,20 +45,6 @@ const getImageOfTheDay(){
   
 }
 ```
-
-
-## Task 1.6 Initialise yarn for the local directory
-
-```
-yarn
-```
-
-## Task 1.7 Run the application code
-```
-yarn start
-```
-![Initial Project view](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_1_yarn_install.png "Initial Yarn installation")
-
 
 ## Task 1.8 Add an API Key in `.env` file
 __NOTE:__ Change to valid NASA API key or `DEMO_KEY`
