@@ -4,8 +4,16 @@ let store = {
     rovers: ['Curiosity', 'Opportunity', 'Spirit'],
 }
 
+
 // add our markup to the page
 const root = document.getElementById('root')
+
+
+// listening for load event because page should load before any JS is called
+window.addEventListener('load', () => {
+    render(root, store)
+})
+
 
 const updateStore = (store, newState) => {
     store = Object.assign(store, newState)
@@ -15,7 +23,6 @@ const updateStore = (store, newState) => {
 const render = async (root, state) => {
     root.innerHTML = App(state)
 }
-
 
 // create content
 const App = (state) => {
@@ -38,15 +45,11 @@ const App = (state) => {
                 </p>
                 ${ImageOfTheDay(apod)}
             </section>
+            <button onClick="tempButtonFunction()">Click me </button>
         </main>
         <footer></footer>
     `
 }
-
-// listening for load event because page should load before any JS is called
-window.addEventListener('load', () => {
-    render(root, store)
-})
 
 // ------------------------------------------------------  COMPONENTS
 
@@ -97,9 +100,41 @@ const ImageOfTheDay = (apod) => {
 const getImageOfTheDay = (state) => {
     let { apod } = state
 
-    fetch(`http://localhost:3000/apod`)
+    fetch(`http://localhost:8080/apod`)
         .then(res => res.json())
         .then(apod => updateStore(store, { apod }))
 
     return data
 }
+
+
+
+// TODO: Temporary Function - will be replaced
+// ------------------------------------------------------  COMPONENTS
+function tempButtonFunction(){
+//  alert("Hello");
+//  console.log(`Hello`);
+
+  // Copied from the addEventListener()
+  renderRover(root, store)
+}
+
+
+const renderRover = async (root, state) => {
+    root.innerHTML = AppRover(state)
+}
+
+
+const AppRover = (state) => {
+    let { rovers, apod } = state
+
+    return `
+        <main>
+            <section>
+                <h3>Put things on the page!</h3>
+            </section>
+        </main>
+    `
+}
+// ------------------------------------------------------  COMPONENTS
+
