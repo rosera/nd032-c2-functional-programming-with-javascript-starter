@@ -36,6 +36,9 @@
 - [x] Added renderRover, AppRover functions
 - [x] Put some test html onscreen using the functions
 
+![Updated Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_4_architecture.png "Updated Architecture")
+
+
 # Task 5- [Update Client.js - Onscreen display and fetch]()
 - [ ] Retrieve information using fetch API
 - [ ] Display information from the fetch API
