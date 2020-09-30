@@ -40,15 +40,20 @@
 
 
 # Task 5- [Update Client.js - Onscreen display and fetch]()
-- [ ] Retrieve information using fetch API
-- [ ] Display information from the fetch API
-- [ ] Add console.log/onscreen info to show Rover fetch
-- [ ] Test the fetch - show information/parse information
+- [x] Retrieve information using fetch API
+- [x] Display information from the fetch API
+- [x] Add console.log/onscreen info to show Rover fetch
+- [x] Test the fetch - show information/parse information
 
-# Task 6- [TBC]()
+![Fetch Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_5_architecture.png "Fetch Architecture")
+
+
+# Task 6- [Rover fetch]()
+- [ ] Update the fetch to use the Rover route
+- [ ] Update the application to use the Rover object
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
-- [ ] Test
+- [ ] Test the fetch - show information/parse information
 
 # Task 7- [TBC]()
 
