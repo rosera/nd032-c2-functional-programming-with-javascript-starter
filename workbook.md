@@ -31,10 +31,13 @@
 
 
 # Task 4 - [Add Rover functionality]()
-- [ ] Reuse the existing code hierarchy of client.js
-- [ ] Mirror the original apod route code
-- [ ] Added renderRover, AppRover functions
-- [ ] Put some test html onscreen using the functions
+- [x] Reuse the existing code hierarchy of client.js
+- [x] Mirror the original apod route code
+- [x] Added renderRover, AppRover functions
+- [x] Put some test html onscreen using the functions
+
+![Updated Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_4_architecture.png "Updated Architecture")
+
 
 # Task 5- [Update Client.js - Onscreen display and fetch]()
 - [ ] Retrieve information using fetch API
