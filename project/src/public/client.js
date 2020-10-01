@@ -90,6 +90,8 @@ const ImageOfTheDay = (apod) => {
     } else {
         return (`
             <img src="${apod.image.url}" height="350px" width="100%" />
+            <p>${apod.image.title}</p>
+            <p>${apod.image.copyright}</p>
             <p>${apod.image.explanation}</p>
         `)
     }
@@ -101,6 +103,7 @@ const ImageOfTheDay = (apod) => {
 const getImageOfTheDay = (state) => {
     let { apod } = state
 
+    // Reference index.js express Route: /apod
     fetch(`http://localhost:8080/apod`)
         .then(res => res.json())
         .then(apod => updateStore(store, { apod }))
@@ -133,47 +136,47 @@ const AppRover = (state) => {
         <main>
             <section>
                 <h3>Put things on the page!</h3>
-                ${ImageOfTheDayRover(apod)}
+                ${ImageOfTheDayRover(rovers)}
             </section>
         </main>
     `
 }
 
 // Example of a pure function that renders infomation requested from the backend
-const ImageOfTheDayRover = (apod) => {
+const ImageOfTheDayRover = (rovers) => {
 
     // If image does not already exist, or it is not from today -- request it again
-    const today = new Date()
-    const photodate = new Date(apod.date)
+//    const today = new Date()
+//    const photodate = new Date(apod.date)
     
-    console.log("IOTD Dates: " + photodate.getDate(), today.getDate());
+//    console.log("IOTD Dates: " + photodate.getDate(), today.getDate());
 
-    console.log("Date equality: " + photodate.getDate() === today.getDate());
-    if (!apod || apod.date === today.getDate() ) {
+//    console.log("Date equality: " + photodate.getDate() === today.getDate());
+//    if (!rovers || apod.date === today.getDate() ) {
+    if (!rovers) {
         getImageOfTheDayRover(store)
     }
 
     // check if the photo of the day is actually type video!
-    if (apod.media_type === "video") {
+//    if (apod.media_type === "video") {
+//        return (`
+//            <p>See today's featured video <a href="${apod.url}">here</a></p>
+//            <p>${apod.title}</p>
+//            <p>${apod.explanation}</p>
+//        `)
+//    } else {
         return (`
-            <p>See today's featured video <a href="${apod.url}">here</a></p>
-            <p>${apod.title}</p>
-            <p>${apod.explanation}</p>
+            <p>${rovers.photos.photos}</p>
         `)
-    } else {
-        return (`
-            <img src="${apod.image.url}" height="350px" width="100%" />
-            <p>${apod.image.explanation}</p>
-        `)
-    }
+//    }
 }
 
 const getImageOfTheDayRover = (state) => {
-    let { apod } = state
+    let { rover } = state
 
     fetch(`http://localhost:8080/rover`)
         .then(res => res.json())
-        .then(apod => updateStore(store, { apod }))
+        .then(rover => updateStore(store, { rover }))
 
     return data
 }
