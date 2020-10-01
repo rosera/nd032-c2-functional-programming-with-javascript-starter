@@ -51,10 +51,44 @@
 - [x] Update the fetch to use the Rover route
 - [x] Update the application to use the Rover object
 
-# Task 7- [TBC]()
-- [ ] Parse the json array
+# Task 7- [Fetch Async/Await]()
+
+- [ ] Duplicate the updateStore function to call the renderRover function
+- [ ] Update the server/index.js to `return the json data`
+```
+    1 app.get('/rover', async (req, res) => {
+    2     try {
+    3         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
+    4             .then(res => { return res.json() })
+    5
+    6         console.log(`Response: ${response.photos[0].id}`)  
+    7    
+    8         res.send({ response })   
+    9     } catch (err) {
+   10         console.log('error:', err);
+   11     }
+   12 })     
+```
+
+- [ ] Update the public/client.js
+```
+  1 const getImageOfTheDayRover = (state) => {
+  2     let { mars } = state
+  3     
+  4     fetch(`http://localhost:8080/rover`)    
+  5         .then(res => res.json())     
+  6         .then(mars => updateStoreRover(store, { mars }))      
+  7 } 
+```
+
+- [ ] The index.js the returned object is labelled `response`
+- [ ] Parse the object using dot notation e.g.
+
+```
+  mars.response.photos[0].id
+```
+- [ ] Render information for the Curiosity Rover in the html
 - [ ] Test the fetch - show information/parse information
-- [ ] Display information for the Curiosity Rover
 
 # Task 8- [TBC]()
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
