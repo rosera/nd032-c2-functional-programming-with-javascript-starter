@@ -28,9 +28,12 @@ app.get('/apod', async (req, res) => {
 // Rover API call
 app.get('/rover', async (req, res) => {
     try {
-        let photos = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
-            .then(res => res.json())
-        res.send({ photos })
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
+            .then(res => { return res.json() })
+
+        console.log(`Response: ${response.photos[0].id}`)
+
+        res.send({ response })
     } catch (err) {
         console.log('error:', err);
     }

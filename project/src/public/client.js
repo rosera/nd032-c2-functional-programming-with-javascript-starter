@@ -1,6 +1,7 @@
 let store = {
     user: { name: "Student" },
     apod: '',
+    mars: '',
     rovers: ['Curiosity', 'Opportunity', 'Spirit'],
 }
 
@@ -11,7 +12,8 @@ const root = document.getElementById('root')
 
 // listening for load event because page should load before any JS is called
 window.addEventListener('load', () => {
-    render(root, store)
+//    render(root, store)
+    renderRover(root, store)
 })
 
 
@@ -128,22 +130,27 @@ const renderRover = async (root, state) => {
     root.innerHTML = AppRover(state)
 }
 
+const updateStoreRover = (store, newState) => {
+    store = Object.assign(store, newState)
+    renderRover(root, store)
+}
+
 
 const AppRover = (state) => {
-    let { rovers, apod } = state
+    let { rovers, apod, mars } = state
 
     return `
         <main>
             <section>
                 <h3>Put things on the page!</h3>
-                ${ImageOfTheDayRover(rovers)}
+                ${ImageOfTheDayRover(mars)}
             </section>
         </main>
     `
 }
 
 // Example of a pure function that renders infomation requested from the backend
-const ImageOfTheDayRover = (rovers) => {
+const ImageOfTheDayRover = (mars) => {
 
     // If image does not already exist, or it is not from today -- request it again
 //    const today = new Date()
@@ -153,7 +160,7 @@ const ImageOfTheDayRover = (rovers) => {
 
 //    console.log("Date equality: " + photodate.getDate() === today.getDate());
 //    if (!rovers || apod.date === today.getDate() ) {
-    if (!rovers) {
+    if (!mars) {
         getImageOfTheDayRover(store)
     }
 
@@ -166,19 +173,18 @@ const ImageOfTheDayRover = (rovers) => {
 //        `)
 //    } else {
         return (`
-            <p>${rovers.photos.photos}</p>
+            <p>Testing Mars Rover</p>
+            <p>Mars: ${mars.response.photos[0].id}</p>
         `)
 //    }
 }
 
 const getImageOfTheDayRover = (state) => {
-    let { rover } = state
+    let { mars } = state
 
     fetch(`http://localhost:8080/rover`)
         .then(res => res.json())
-        .then(rover => updateStore(store, { rover }))
-
-    return data
+        .then(mars => updateStoreRover(store, { mars }))
 }
 // ------------------------------------------------------  COMPONENTS
 
