@@ -47,15 +47,17 @@
 
 ![Fetch Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_5_architecture.png "Fetch Architecture")
 
-
 # Task 6- [Rover fetch]()
-- [ ] Update the fetch to use the Rover route
-- [ ] Update the application to use the Rover object
-- [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
-- [ ] Add an Alert for each Mars Rover to indicate it has been selected
-- [ ] Test the fetch - show information/parse information
+- [x] Update the fetch to use the Rover route
+- [x] Update the application to use the Rover object
 
 # Task 7- [TBC]()
+- [ ] Parse the json array
+- [ ] Test the fetch - show information/parse information
+- [ ] Display information for the Curiosity Rover
 
+# Task 8- [TBC]()
+- [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
+- [ ] Add an Alert for each Mars Rover to indicate it has been selected
 - [ ] Setup new html for page
 - [ ] Add fancy html
