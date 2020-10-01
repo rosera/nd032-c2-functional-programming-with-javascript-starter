@@ -54,6 +54,9 @@
 # Task 7- [Fetch Async/Await]()
 
 - [ ] Duplicate the updateStore function to call the renderRover function
+
+![Fetch Update Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_7_architecture.png "Add UpdateStoreRover Function")
+
 - [ ] Update the server/index.js to `return the json data`
 ```
     1 app.get('/rover', async (req, res) => {
