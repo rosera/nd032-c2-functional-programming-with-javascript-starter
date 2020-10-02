@@ -109,7 +109,21 @@
 - [X] Render information for the Curiosity Rover in the html
 - [X] Test the fetch - show information/parse information
 
-# Task 8- [TBC]()
+# Task 8 - [User Interface]()
+
+- [ ] Rover Dashboard minimum information
+
+| Field  | JSON |
+|-------|-------|
+| Launch Date | launch_date |
+| Landing Date | landing_date |
+| Status | active |
+| Available photos | img_src |
+| Date the most recent photos were taken | earth_date | 
+
+
+
+# Task 9 - [TBC]()
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
 - [ ] Setup new html for page
