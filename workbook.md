@@ -111,17 +111,34 @@
 
 # Task 8 - [User Interface]()
 
-- [ ] Rover Dashboard minimum information
+- [x] Rover Dashboard minimum information
 
 | Field  | JSON |
 |-------|-------|
 | Launch Date | launch_date |
 | Landing Date | landing_date |
-| Status | active |
+| Status | status |
 | Available photos | img_src |
 | Date the most recent photos were taken | earth_date | 
 
+```
+const ImageOfTheDayRover = (mars) => {
+    if (!mars) {
+        getImageOfTheDayRover(store)
+    }
+    
+    return (`
+            <p>Testing Mars Rover</p>
+            <p>Mars ID: ${mars.response.photos[0].id}</p>
+            <p>Mars launch date: ${mars.response.photos[0].rover.launch_date}</p>
+            <p>Mars landing date: ${mars.response.photos[0].rover.landing_date}</p>
+            <p>Mars status: ${mars.response.photos[0].rover.status}</p>
+            <img src="${mars.response.photos[0].img_src}" height="350px" width="100%" />
+            <p>Mars image date: ${mars.response.photos[0].earth_date}</p>
+    `)
+}
 
+```
 
 # Task 9 - [TBC]()
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
