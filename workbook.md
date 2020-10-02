@@ -53,11 +53,16 @@
 
 # Task 7- [Fetch Async/Await]()
 
-- [ ] Duplicate the updateStore function to call the renderRover function
+- [x] Duplicate the updateStore function to call the renderRover function
 
 ![Fetch Update Architecture](https://github.com/rosera/nd032-c2-functional-programming-with-javascript-starter/blob/project/images/task_7_architecture.png "Add UpdateStoreRover Function")
 
-- [ ] Update the server/index.js to `return the json data`
+- [x] Update the server/index.js to `return the json data`
+
+* response object holds the res.json value - line 3
+* Changed the fetch to return the res.json - line 4
+* pass the response variable back as an object i.e enclose in braces - line 8
+
 ```
     1 app.get('/rover', async (req, res) => {
     2     try {
@@ -73,7 +78,12 @@
    12 })     
 ```
 
-- [ ] Update the public/client.js
+- [x] Update the public/client.js
+
+* add new variable mars - line 2
+* Retrieve a json object - line 5
+* update the store with the reponse object appended to mars - 6
+
 ```
   1 const getImageOfTheDayRover = (state) => {
   2     let { mars } = state
@@ -84,14 +94,20 @@
   7 } 
 ```
 
-- [ ] The index.js the returned object is labelled `response`
-- [ ] Parse the object using dot notation e.g.
+- [x] The index.js returns an object labelled `response`
+- [x] Parse the object using dot notation e.g.
+
+* Variable - mars
+* Object - response
+* Array - photos
+* Element - id
 
 ```
   mars.response.photos[0].id
 ```
-- [ ] Render information for the Curiosity Rover in the html
-- [ ] Test the fetch - show information/parse information
+
+- [X] Render information for the Curiosity Rover in the html
+- [X] Test the fetch - show information/parse information
 
 # Task 8- [TBC]()
 - [ ] Display the information for three Mars Rovers (Curiosity, Opportunity and Spirit)
