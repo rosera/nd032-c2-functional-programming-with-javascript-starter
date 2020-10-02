@@ -113,13 +113,16 @@
 
 - [x] Rover Dashboard minimum information
 
-| Field  | JSON |
-|-------|-------|
-| Launch Date | launch_date |
-| Landing Date | landing_date |
-| Status | status |
-| Available photos | img_src |
-| Date the most recent photos were taken | earth_date | 
+| Field  | JSON | Example |
+|-------|-------| --------|
+| Launch Date | launch_date |photos[0].rover.launch_date |
+| Landing Date | landing_date | photos[0].rover.landing_date |
+| Status | status | photos[0].rover.status |
+| Available photos |img_src |photos[0].img_src |
+| Date the most recent photos were taken | earth_date | photos[0].earth_date | 
+
+
+Example code to render the information
 
 ```
 const ImageOfTheDayRover = (mars) => {
