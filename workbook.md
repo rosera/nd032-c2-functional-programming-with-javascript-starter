@@ -98,3 +98,36 @@
 - [ ] Add an Alert for each Mars Rover to indicate it has been selected
 - [ ] Setup new html for page
 - [ ] Add fancy html
+
+# Task X - [Rubric](https://review.udacity.com/#!/rubrics/2708/view)
+
+- [ ] Use Pure functions to organise logic
+- [ ] Use of const/let correctly
+- [ ] Use of array methods correctly
+- [ ] Use of Higher order functions - __use at least 2__
+
+- [ ] App must use a Node/Express backend. Following npm package:
+
+* Express
+* Body parser
+* Dotenv
+* ImmutableJS
+
+
+- [ ] Immutable JS 
+
+Set up Immutable js for this project. 
+For this project we are using a script for the CDN version. You should see the script referenced in `index.html`.
+
+- [ ] Rover Dashboard minimum information
+* Launch Date
+* Landing Date
+* Status
+* Most recently available photos
+* Date the most recent photos were taken
+
+- [ ] Create an interative UI
+- [ ] Create appealing page with mobile first styling
+* Incorporate the apod image in the styling.
+* Add the Mars weather embed code.
+* Add a wind graph at the location of the rover.
