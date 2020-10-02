@@ -125,16 +125,14 @@ function tempButtonFunction(){
   renderRover(root, store)
 }
 
-
-const renderRover = async (root, state) => {
-    root.innerHTML = AppRover(state)
-}
-
 const updateStoreRover = (store, newState) => {
     store = Object.assign(store, newState)
     renderRover(root, store)
 }
 
+const renderRover = async (root, state) => {
+    root.innerHTML = AppRover(state)
+}
 
 const AppRover = (state) => {
     let { rovers, apod, mars } = state
@@ -174,7 +172,12 @@ const ImageOfTheDayRover = (mars) => {
 //    } else {
         return (`
             <p>Testing Mars Rover</p>
-            <p>Mars: ${mars.response.photos[0].id}</p>
+            <p>Mars ID: ${mars.response.photos[0].id}</p>
+            <p>Mars launch date: ${mars.response.photos[0].rover.launch_date}</p>
+            <p>Mars landing date: ${mars.response.photos[0].rover.landing_date}</p>
+            <p>Mars status: ${mars.response.photos[0].rover.status}</p>
+            <img src="${mars.response.photos[0].img_src}" height="350px" width="100%" />
+            <p>Mars image date: ${mars.response.photos[0].earth_date}</p>
         `)
 //    }
 }
