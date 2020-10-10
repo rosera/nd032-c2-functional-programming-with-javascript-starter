@@ -25,14 +25,39 @@ app.get('/apod', async (req, res) => {
     }
 })
 
-// Rover API call
-app.get('/rover', async (req, res) => {
+// Rover Curiosity: API call
+app.get('/curiosity', async (req, res) => {
     try {
+        // Make the API call using the API Key
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
+        // Return an object named response
+        res.send({ response })
+    } catch (err) {
+        console.log('error:', err);
+    }
+})
 
-        console.log(`Response: ${response.photos[0].id}`)
+// Rover Curiosity: API call
+app.get('/opportunity', async (req, res) => {
+    try {
+        // Make the API call using the API Key
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${process.env.API_KEY}`)
+            .then(res => { return res.json() })
+        // Return an object named response
+        res.send({ response })
+    } catch (err) {
+        console.log('error:', err);
+    }
+})
 
+// Rover Curiosity: API call
+app.get('/spirit', async (req, res) => {
+    try {
+        // Make the API call using the API Key
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${process.env.API_KEY}`)
+            .then(res => { return res.json() })
+        // Return an object named response
         res.send({ response })
     } catch (err) {
         console.log('error:', err);
