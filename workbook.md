@@ -10,7 +10,8 @@
 - [x] Switch to the branch `project`
 - [x] Change to the sub-directory `project`
 - [x] Amend the NASA API_KEY
-- [x] Rename `.env-sample` environment file to `.env`
+- [x] Rename `nd032-c2-functional-programming-with-javascript-starter/project/.env-sample` environment file to `.env`
+- [x] Change demo key to `DEMO_KEY`
 - [x] Initialise yarn
 - [x] Test the application
 
