@@ -28,7 +28,6 @@ app.get('/apod', async (req, res) => {
 // Rover Curiosity: API call
 app.get('/curiosity', async (req, res) => {
     try {
-        console.log(`curiosity`)
         // Make the API call using the API Key
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
@@ -42,7 +41,6 @@ app.get('/curiosity', async (req, res) => {
 // Rover Curiosity: API call
 app.get('/opportunity', async (req, res) => {
     try {
-        console.log(`opportunity`)
         // Make the API call using the API Key
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
@@ -56,7 +54,6 @@ app.get('/opportunity', async (req, res) => {
 // Rover Curiosity: API call
 app.get('/spirit', async (req, res) => {
     try {
-        console.log(`spirit`)
         // Make the API call using the API Key
         let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
