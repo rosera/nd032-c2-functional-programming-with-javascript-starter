@@ -29,7 +29,7 @@ app.get('/apod', async (req, res) => {
 app.get('/curiosity', async (req, res) => {
     try {
         // Make the API call using the API Key
-        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${process.env.API_KEY}`)
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=2912&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
         // Return an object named response
         res.send({ response })
@@ -41,8 +41,8 @@ app.get('/curiosity', async (req, res) => {
 // Rover Curiosity: API call
 app.get('/opportunity', async (req, res) => {
     try {
-        // Make the API call using the API Key
-        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${process.env.API_KEY}`)
+        // Make the API call using the API Key - Check the manifest for the latest photos (i.e. MAX sol date)
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=5111&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
         // Return an object named response
         res.send({ response })
@@ -54,8 +54,8 @@ app.get('/opportunity', async (req, res) => {
 // Rover Curiosity: API call
 app.get('/spirit', async (req, res) => {
     try {
-        // Make the API call using the API Key
-        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${process.env.API_KEY}`)
+        // Make the API call using the API Key - Check the manifest for the latest photos (i.e. MAX sol date)
+        let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=2208&api_key=${process.env.API_KEY}`)
             .then(res => { return res.json() })
         // Return an object named response
         res.send({ response })
