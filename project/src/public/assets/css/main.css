@@ -29,6 +29,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
+  flex-direction;
+  min-height: 100vh;
 	line-height: 1;
 }
 
@@ -122,15 +124,16 @@ input, select, textarea {
 		line-height: 1.75;
 	}
 
-		@media screen and (max-width: 1680px) {
+    /* ----------------------- LARGE SCREEN ----------------------*/
+		@media screen and (min-width: 1824px) {
 
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
 
 		}
-
-		@media screen and (max-width: 1280px) {
+    /* ----------------------- DESKTOP ---------------------------*/
+		@media screen and (min-width: 1224px) {
 
 			body, input, select, textarea {
 				font-size: 12pt;
@@ -138,7 +141,17 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+    /* ----------------------- TABLET ----------------------------*/
+		@media screen and (min-width: 768px) {
+
+			body, input, select, textarea {
+				font-size: 11pt;
+			}
+
+		}
+
+    /* ----------------------- MOBILE ---- ---------------------*/
+		@media screen and (min-width: 360px) {
 
 			body, input, select, textarea {
 				font-size: 11pt;
@@ -234,7 +247,7 @@ input, select, textarea {
 		font-size: 0.6em;
 	}
 
-	@media screen and (max-width: 736px) {
+	@media screen and (max-width: 360px) {
 
 		h1 {
 			font-size: 2em;
@@ -1305,7 +1318,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			.row {
 				display: flex;
@@ -2193,7 +2206,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			.features section {
 				padding: 2.5em 1.5em 0.1em 5.5em ;
@@ -2976,7 +2989,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			.split > * {
 				margin: 3em 0 0 0;
@@ -3118,14 +3131,14 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			.spotlights > section > .image {
 				height: 50vh;
 				min-height: 15em;
 			}
 
-			.spotlights > section > .content {
+			.spotlights > section > .content > .inner {
 				padding: 3em 2em 1em 2em ;
 			}
 
@@ -3227,7 +3240,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 360px) {
 
 				.wrapper > .inner {
 					padding: 3em 2em 1em 2em ;
@@ -3295,7 +3308,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 360px) {
 
 				.wrapper.fullscreen {
 					padding: 2em 0;
@@ -3425,7 +3438,7 @@ input, select, textarea {
 							color: #ffffff;
 						}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			#header {
 				padding: 1em 2em;
@@ -3477,7 +3490,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			#sidebar + #wrapper {
 				padding-top: 0;
@@ -3862,7 +3875,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 736px) {
+		@media screen and (max-width: 360px) {
 
 			#sidebar {
 				display: none;
@@ -3892,7 +3905,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 736px) {
+			@media screen and (max-width: 360px) {
 
 				#intro p {
 					font-size: 1em;
@@ -3924,6 +3937,8 @@ body {
 
 /* Center website */
 .main {
+  flex: 1;
+  padding: 20px;
   max-width: 1000px;
   margin: auto;
 }
@@ -3995,7 +4010,7 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
   word-break: break-all;
 }
 
