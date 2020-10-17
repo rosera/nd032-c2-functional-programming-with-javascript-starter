@@ -25,6 +25,33 @@ app.get('/apod', async (req, res) => {
     }
 })
 
+// Apod API call
+app.get('/mars/:roverID', async (req, res) => {
+    try {
+      let rover = req.params.roverID;
+
+      // Call the manifest first to get the SOL setting
+      let manifest = await fetch(`https://api.nasa.gov/mars-photos/api/v1/manifests/${req.params.roverID}?api_key=${process.env.API_KEY}`)
+        .then(res => res.json())
+//        res.send({ manifest })
+
+      // Display the max sol for the Rover
+      console.log(`MAX SOL: ${manifest.photo_manifest.max_sol}`);
+
+      let MAX_SOL =  manifest.photo_manifest.max_sol;
+
+      // Call Rover API
+      let response = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${req.params.roverID}/photos?sol=${MAX_SOL}&api_key=${process.env.API_KEY}`)
+        .then(res => res.json())
+        res.send({ response })
+    } catch (err) {
+        console.log('error:', err);
+    }
+})
+
+
+/*
+// Rover Curiosity: API call
 // Rover Curiosity: API call
 app.get('/curiosity', async (req, res) => {
     try {
@@ -63,5 +90,5 @@ app.get('/spirit', async (req, res) => {
         console.log('error:', err);
     }
 })
-
+*/
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

@@ -151,7 +151,7 @@ input, select, textarea {
 		}
 
     /* ----------------------- MOBILE ---- ---------------------*/
-		@media screen and (min-width: 360px) {
+		@media screen and (min-width: 320px) {
 
 			body, input, select, textarea {
 				font-size: 11pt;
@@ -247,7 +247,7 @@ input, select, textarea {
 		font-size: 0.6em;
 	}
 
-	@media screen and (max-width: 360px) {
+	@media screen and (max-width: 320px) {
 
 		h1 {
 			font-size: 2em;
@@ -1318,7 +1318,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			.row {
 				display: flex;
@@ -2206,7 +2206,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			.features section {
 				padding: 2.5em 1.5em 0.1em 5.5em ;
@@ -2989,7 +2989,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			.split > * {
 				margin: 3em 0 0 0;
@@ -3131,7 +3131,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			.spotlights > section > .image {
 				height: 50vh;
@@ -3240,7 +3240,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 360px) {
+			@media screen and (max-width: 320px) {
 
 				.wrapper > .inner {
 					padding: 3em 2em 1em 2em ;
@@ -3308,7 +3308,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 360px) {
+			@media screen and (max-width: 320px) {
 
 				.wrapper.fullscreen {
 					padding: 2em 0;
@@ -3438,7 +3438,7 @@ input, select, textarea {
 							color: #ffffff;
 						}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			#header {
 				padding: 1em 2em;
@@ -3490,7 +3490,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			#sidebar + #wrapper {
 				padding-top: 0;
@@ -3752,7 +3752,7 @@ input, select, textarea {
 			border: 0;
 			color: rgba(255, 255, 255, 0.35);
 			display: block;
-			font-size: 0.6em;
+			font-size: 0.5em;
 			font-weight: bold;
 			letter-spacing: 0.25em;
 			line-height: 1.75;
@@ -3875,7 +3875,7 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 360px) {
+		@media screen and (max-width: 320px) {
 
 			#sidebar {
 				display: none;
@@ -3905,7 +3905,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 360px) {
+			@media screen and (max-width: 320px) {
 
 				#intro p {
 					font-size: 1em;
@@ -3921,75 +3921,6 @@ input, select, textarea {
 
 		}
 
-
-//----------------------------------------------------------------------------
-// Slideshow CSS 
-//----------------------------------------------------------------------------
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #f1f1f1;
-  padding: 20px;
-  font-family: Arial;
-}
-
-/* Center website */
-.main {
-  flex: 1;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-
-.row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.row,
-.row > .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.content {
-/*  background-color: white; */
-  padding: 10px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
 
 //--------------------------------------------------------------------------
 // Portfolio CSS
@@ -4009,11 +3940,6 @@ body {
   margin: auto;
 }
 
-h1 {
-  font-size: 30px;
-  word-break: break-all;
-}
-
 .row {
   margin: 8px -16px;
 }
@@ -4043,7 +3969,7 @@ h1 {
   padding: 10px;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
+/* Responsive layout - makes a two column-layout instead of four columns */ 
 @media screen and (max-width: 900px) {
   .column {
     width: 50%;
@@ -4056,3 +3982,4 @@ h1 {
     width: 100%;
   }
 }
+

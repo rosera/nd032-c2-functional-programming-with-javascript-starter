@@ -1,3 +1,4 @@
+// TODO: Review - Change store to immutable
 let store = {
     user: { name: "Student" },
     apod: '',
@@ -9,16 +10,33 @@ let store = {
 // add our markup to the page
 const root = document.getElementById('root')
 
+// TODO: Review - Add button to enable fetch in code
+const domCuriosity = document.getElementById('btnCuriosity')
+const domOpportunity = document.getElementById('btnOpportunity')
+const domSpirit = document.getElementById('btnSpirit')
+
 // listening for load event because page should load before any JS is called
 window.addEventListener('load', () => {
-  
+
+  // TODO: Review - Only Load Rover info on demand
   // Perform Rover workflow
-  store.rovers.map((rover) => {
-    renderRover(rover, store);
-  });
+//  store.rovers.map((rover) => {
+//    renderRover(rover, store);
+//  });
 
   render(root, store)
 
+})
+
+domCuriosity.addEventListener('click', (event) => {
+  // Dont do this on load
+  event.preventDefault();
+  alert("Clicked Me");
+  // TODO: Review - minimise data 
+  // This can only be clicked when on new screen
+  // Initialise
+  store.mars = '';
+  renderRover(store.rovers[0], store);
 })
 
 
@@ -100,8 +118,6 @@ const getImageOfTheDay = (state) => {
 }
 
 
-
-
 const updateStoreRover = (rover, store, newState) => {
     store = Object.assign(store, newState)
     renderRover(rover, store)
@@ -153,10 +169,19 @@ const ImageOfTheDayRover = (rover, mars) => {
 }
 
 // Call the Curiosity Route - Curiosity Rover NASA API call
-const getImageOfTheDayRover = (rover, state) => {
+const getImageOfTheDayRover2 = (rover, state) => {
     let { mars } = state
 
     fetch(`http://localhost:8080/${rover.toLowerCase()}`)
+        .then(res => res.json())
+        .then(mars => updateStoreRover(rover, store, { mars }))
+}
+
+// Call the Curiosity Route - Curiosity Rover NASA API call
+const getImageOfTheDayRover = (rover, state) => {
+    let { mars } = state
+
+    fetch(`http://localhost:8080/mars/${rover.toLowerCase()}`)
         .then(res => res.json())
         .then(mars => updateStoreRover(rover, store, { mars }))
 }
