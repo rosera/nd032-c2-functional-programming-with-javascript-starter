@@ -1,4 +1,12 @@
-// TODO: Review - Change store to immutable
+// TODO: Review - Change store to immutable MAP
+const storeMap = Immutable.Map({
+    data: '',
+    api: 'apod',
+});
+
+// TODO: Review - Add immutable
+const apodState = Immutable.Map(storeMap);
+
 let store = {
     user: { name: "Student" },
     apod: '',
@@ -17,13 +25,6 @@ const domSpirit = document.getElementById('btnSpirit')
 
 // listening for load event because page should load before any JS is called
 window.addEventListener('load', () => {
-
-  // TODO: Review - Only Load Rover info on demand
-  // Perform Rover workflow
-//  store.rovers.map((rover) => {
-//    renderRover(rover, store);
-//  });
-
   render(root, store)
 
 })
@@ -31,13 +32,39 @@ window.addEventListener('load', () => {
 domCuriosity.addEventListener('click', (event) => {
   // Dont do this on load
   event.preventDefault();
-  alert("Clicked Me");
-  // TODO: Review - minimise data 
-  // This can only be clicked when on new screen
-  // Initialise
-  store.mars = '';
-  renderRover(store.rovers[0], store);
+
+  // Review - Call Rover fetch one at a time 
+  roverWorkflow('curiosity', '');
 })
+
+
+domOpportunity.addEventListener('click', (event) => {
+  // Dont do this on load
+  event.preventDefault();
+
+  // Review - Call Rover fetch one at a time 
+  roverWorkflow('opportunity', '');
+})
+
+domSpirit.addEventListener('click', (event) => {
+  // Dont do this on load
+  event.preventDefault();
+  
+  // Review - Call Rover fetch one at a time 
+  roverWorkflow('spirit', '');
+})
+
+
+const roverWorkflow = function doRender(apiValue, dataValue){
+  // TODO: Review - Perform one Rover fetch at a time 
+  store.mars = '';
+
+  // Call immutable 
+  const newState = apodState.set('api', apiValue).set('data', dataValue);
+
+  // Perform onscreen information
+  renderRover(newState.get('api'), store);
+}
 
 
 const updateStore = (store, newState) => {
@@ -141,7 +168,7 @@ const AppRover = (rover, state) => {
 const ImageOfTheDayRover = (rover, mars) => {
     // Check if the object exists
     if (!mars) {
-        getImageOfTheDayRover(rover, mars)
+       getImageOfTheDayRover(rover, mars)
     }
 
     if (typeof(mars.response.photos) !== 'undefined') {
@@ -168,14 +195,6 @@ const ImageOfTheDayRover = (rover, mars) => {
    }
 }
 
-// Call the Curiosity Route - Curiosity Rover NASA API call
-const getImageOfTheDayRover2 = (rover, state) => {
-    let { mars } = state
-
-    fetch(`http://localhost:8080/${rover.toLowerCase()}`)
-        .then(res => res.json())
-        .then(mars => updateStoreRover(rover, store, { mars }))
-}
 
 // Call the Curiosity Route - Curiosity Rover NASA API call
 const getImageOfTheDayRover = (rover, state) => {
