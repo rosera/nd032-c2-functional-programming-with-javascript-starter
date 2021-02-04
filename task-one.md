@@ -46,8 +46,19 @@ const getImageOfTheDay(){
 }
 ```
 
-## Task 1.8 Add an API Key in `.env` file
+## Task 1.8 Add an API Key in `.env` file in the project directory
 __NOTE:__ Change to valid NASA API key or `DEMO_KEY`
+
+```
+.
+├── node_modules
+├── package.json
+├── src
+├── .env
+└── yarn.lock
+```
+In the env file add the API key
+
 ```
 API_KEY=YOUR_API_KEY
 ```
